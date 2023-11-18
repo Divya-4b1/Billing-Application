@@ -5,7 +5,7 @@ using BillingApp.Reposittories;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace ShoppingApp.Services
+namespace BillingApp.Services
 {
     public class UserService : IUserService
     {

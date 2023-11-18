@@ -2064,11 +2064,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\OneDrive\\Documents\\hexaware\\day 1\\BillingSolution\\BillingApp\\BillingApp.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\OneDrive\\Documents\\hexaware\\project\\BillingSolution\\BillingApp\\BillingApp.csproj",
       "projectName": "BillingApp",
-      "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Documents\\hexaware\\day 1\\BillingSolution\\BillingApp\\BillingApp.csproj",
+      "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Documents\\hexaware\\project\\BillingSolution\\BillingApp\\BillingApp.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\OneDrive\\Documents\\hexaware\\day 1\\BillingSolution\\BillingApp\\obj\\",
+      "outputPath": "C:\\Users\\ADMIN\\OneDrive\\Documents\\hexaware\\project\\BillingSolution\\BillingApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2131,7 +2131,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

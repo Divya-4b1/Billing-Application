@@ -38,7 +38,3 @@ namespace BillingApp.Sevices
 
     }
 }
-
-    
-    
-

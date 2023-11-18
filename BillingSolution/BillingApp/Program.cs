@@ -7,7 +7,8 @@ using BillingApp.Sevices;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using ShoppingApp.Services;
+using BillingApp.Services;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 
 namespace BillingApp
 {
@@ -37,7 +38,12 @@ namespace BillingApp
             });
             builder.Services.AddScoped<IRepository<string, User>, UserRepository>();
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IRepository<int, Bill>, BillRepository>();
+            builder.Services.AddScoped<IRepository<int, BillItems>, BillItemsRepository>();
             builder.Services.AddScoped<ITokenService, TokenService>();
+            builder.Services.AddScoped<IRepository<int, Product>, ProductRepository>();
+            builder.Services.AddScoped<IProductService, ProductService>();
+            builder.Services.AddScoped<IBillService, BillSevice>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -48,6 +54,8 @@ namespace BillingApp
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
