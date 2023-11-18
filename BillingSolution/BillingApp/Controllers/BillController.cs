@@ -17,21 +17,21 @@ namespace BillingApp.Controllers
             _billService = billService;
         }
         [HttpPost]
-        public IActionResult AddToCart(BillDTO billDTO)
+        public IActionResult AddToBill(BillDTO billDTO)
         {
             var result = _billService.AddToBill(billDTO);
             if (result)
                 return Ok(billDTO);
-            return BadRequest("Could not add item to cart");
+            return BadRequest("Could not add item to Bill");
         }
         [HttpPost]
         [Route("Remove")]
-        public IActionResult RemoveFromCart(BillDTO billDTO)
+        public IActionResult RemoveFromBill(BillDTO billDTO)
         {
             var result = _billService.RemoveFromBill(billDTO);
             if (result)
                 return Ok(billDTO);
-            return BadRequest("Could not remove item from cart");
+            return BadRequest("Could not remove item from Bill");
         }
     }
 }
