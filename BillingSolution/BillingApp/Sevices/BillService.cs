@@ -2,8 +2,12 @@
 using BillingApp.Models;
 using Microsoft.CodeAnalysis;
 
+using BillingApp.Contexts;
+
 using BillingApp.Models.DTOs;
 using BillingApp.Reposittories;
+using System.Text;
+using Microsoft.EntityFrameworkCore;
 
 namespace BillingApp.Sevices;
 
@@ -123,4 +127,36 @@ public class BillSevice : IBillService
         }
         return false;
     }
+    public decimal CalculateTotalBillAmount(int billNumber)
+    {
+        // Retrieve all items in the bill for the given billNumber
+        var billItems = _billItemRepository.GetAll().Where(ci => ci.BillNumber == billNumber).ToList();
+
+        // Calculate total amount
+        decimal totalAmount = billItems.Sum(item => (decimal)item.Price * item.Quantity);
+
+        return totalAmount;
+    }
+
+    public string GenerateBillReceipt(int billNumber)
+    {
+        // Retrieve all items in the bill for the given billNumber
+        var billItems = _billItemRepository.GetAll().Where(ci => ci.BillNumber == billNumber).ToList();
+
+        // Calculate total amount
+        decimal totalAmount = CalculateTotalBillAmount(billNumber);
+
+        // Generate bill receipt content
+        string receipt = $"Bill Number: {billNumber}\n";
+
+        foreach (var item in billItems)
+        {
+            receipt += $"Product ID: {item.Product_Id}, Price: {item.Price}, Quantity: {item.Quantity}\n";
+        }
+
+        receipt += $"Total Amount: {totalAmount}\n";
+
+        return receipt;
+    }
+
 }

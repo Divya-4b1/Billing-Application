@@ -57,6 +57,36 @@ namespace BillingApp.Reposittories
             }
             return null;
         }
+        public decimal CalculateTotalBillAmount(int billNumber)
+        {
+            var billItems = _context.BillItems.Where(b => b.BillNumber == billNumber).ToList();
+            decimal totalAmount = 0;
+
+            foreach (var item in billItems)
+            {
+                totalAmount += (decimal)item.Price * item.Quantity; // Explicitly cast item.Price from float to decimal
+            }
+
+            return totalAmount;
+        }
+
+        public string GenerateBillReceipt(int billNumber)
+        {
+            var billItems = _context.BillItems.Where(b => b.BillNumber == billNumber).ToList();
+            decimal totalAmount = CalculateTotalBillAmount(billNumber);
+
+            // Generate bill receipt content
+            string receipt = $"Bill Number: {billNumber}\n";
+
+            foreach (var item in billItems)
+            {
+                receipt += $"Product ID: {item.Product_Id}, Price: {item.Price}, Quantity: {item.Quantity}\n";
+            }
+
+            receipt += $"Total Amount: {totalAmount}\n";
+
+            return receipt;
+        }
     }
 }
 

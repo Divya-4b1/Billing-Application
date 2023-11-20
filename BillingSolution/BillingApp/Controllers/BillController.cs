@@ -33,7 +33,31 @@ namespace BillingApp.Controllers
                 return Ok(billDTO);
             return BadRequest("Could not remove item from Bill");
         }
+        [HttpGet("CalculateTotalAmount/{billNumber}")]
+        public IActionResult CalculateTotalAmount(int billNumber)
+        {
+            decimal totalAmount = _billService.CalculateTotalBillAmount(billNumber);
+
+            if (totalAmount >= 0)
+            {
+                return Ok(totalAmount);
+            }
+            else
+            {
+                return NotFound("Bill not found or invalid bill number.");
+            }
+        }
+        [HttpGet]
+        [Route("GenerateBillReceipt/{billNumber}")]
+        public IActionResult GenerateBillReceipt(int billNumber)
+        {
+            string receipt = _billService.GenerateBillReceipt(billNumber);
+            if (receipt != null)
+            {
+                return Ok(receipt);
+            }
+            return BadRequest("Failed to generate bill receipt");
+        }
     }
 }
 
-    
