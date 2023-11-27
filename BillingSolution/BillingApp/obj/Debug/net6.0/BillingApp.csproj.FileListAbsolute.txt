@@ -137,3 +137,11 @@ C:\Users\ADMIN\OneDrive\Documents\hexaware\project\BillingSolution\BillingApp\ob
 C:\Users\ADMIN\OneDrive\Documents\hexaware\project\BillingSolution\BillingApp\obj\Debug\net6.0\BillingApp.genruntimeconfig.cache
 C:\Users\ADMIN\OneDrive\Documents\hexaware\project\BillingSolution\BillingApp\obj\Debug\net6.0\ref\BillingApp.dll
 C:\Users\ADMIN\OneDrive\Documents\hexaware\project\BillingSolution\BillingApp\obj\Debug\net6.0\BillingApp.sourcelink.json
+C:\Users\ADMIN\OneDrive\Documents\hexaware\project\BillingSolution\BillingApp\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\ADMIN\OneDrive\Documents\hexaware\project\BillingSolution\BillingApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ADMIN\OneDrive\Documents\hexaware\project\BillingSolution\BillingApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ADMIN\OneDrive\Documents\hexaware\project\BillingSolution\BillingApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\ADMIN\OneDrive\Documents\hexaware\project\BillingSolution\BillingApp\obj\Debug\net6.0\BillingApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ADMIN\OneDrive\Documents\hexaware\project\BillingSolution\BillingApp\bin\Debug\net6.0\log4net.config
+C:\Users\ADMIN\OneDrive\Documents\hexaware\project\BillingSolution\BillingApp\bin\Debug\net6.0\log4net.dll
+C:\Users\ADMIN\OneDrive\Documents\hexaware\project\BillingSolution\BillingApp\bin\Debug\net6.0\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll

@@ -1,5 +1,6 @@
 ﻿using BillingApp.Interfaces;
 using BillingApp.Models.DTOs;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +9,7 @@ namespace BillingApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("reactApp")]
     public class StaffController : ControllerBase
     {
         private readonly IUserService _userService;

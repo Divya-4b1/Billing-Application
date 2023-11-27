@@ -33,6 +33,7 @@ namespace BillingApp.Controllers
                 return Ok(billDTO);
             return BadRequest("Could not remove item from Bill");
         }
+       
         [HttpGet("CalculateTotalAmount/{billNumber}")]
         public IActionResult CalculateTotalAmount(int billNumber)
         {

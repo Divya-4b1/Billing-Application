@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BillingApp.Migrations
 {
     [DbContext(typeof(BillingContext))]
-    [Migration("20231118073421_init")]
-    partial class init
+    [Migration("20231121064004_initaial")]
+    partial class initaial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

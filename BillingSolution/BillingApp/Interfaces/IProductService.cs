@@ -6,5 +6,7 @@ namespace BillingApp.Interfaces
     {
         List<Product> GetProducts();
         Product Add(Product product);
+        Product Update(Product product);
+        Product Delete(Product product);
     }
 }

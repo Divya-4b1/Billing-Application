@@ -7,5 +7,6 @@ namespace BillingApp.Interfaces
         bool RemoveFromBill(BillDTO billDTO);
         decimal CalculateTotalBillAmount(int billNumber);
         string GenerateBillReceipt(int billNumber);
+        
     }
 }

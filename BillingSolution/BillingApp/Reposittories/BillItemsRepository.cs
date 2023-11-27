@@ -57,6 +57,7 @@ namespace BillingApp.Reposittories
             }
             return null;
         }
+        
         public decimal CalculateTotalBillAmount(int billNumber)
         {
             var billItems = _context.BillItems.Where(b => b.BillNumber == billNumber).ToList();

@@ -127,6 +127,7 @@ public class BillSevice : IBillService
         }
         return false;
     }
+   
     public decimal CalculateTotalBillAmount(int billNumber)
     {
         // Retrieve all items in the bill for the given billNumber
